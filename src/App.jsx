@@ -1,12 +1,25 @@
+import { Route, Routes } from "react-router";
 import "./App.css";
+import Navbar from "./Components/Navbar";
+import Home from "./Pages/Home";
+import MainPage from "./Pages/MainPage";
+import IndividualPage from "./Pages/IndividualPage";
+import Footer from "./Components/Footer";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
-    <main className="flex justify-center gap-4 flex-col min-h-screen">
-      <h1 className="text-3xl text-center font-bold underline">React & Tailwind CSS Starter Pack</h1>
-      <p className="text-center text-xl">This is a starter pack for React & Tailwind CSS projects.</p>
-      <img src="https://bit.ly/3wsmzTy" alt="meme" className="mx-auto" />
-    </main>
+    <div className="w-screen h-screen">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Main_page" element={<MainPage />} />
+        <Route path="/individual_page" element={<IndividualPage />} />
+      </Routes>
+      <Footer />
+      <ToastContainer />
+    </div>
   );
 }
 

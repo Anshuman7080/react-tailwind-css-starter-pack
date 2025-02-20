@@ -1,0 +1,18 @@
+.red-border::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: 4px;
+    bottom: 4px;
+    border: 3px solid red;
+    opacity: 0;
+    border-radius: 8px;
+    transition: opacity 0.4s ease-in-out;
+   
+  }
+  
+  .red-border:hover::before {
+    opacity: 1;
+  
+  }
